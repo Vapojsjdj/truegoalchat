@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع الأخبار العربية</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            background-color: #1a237e;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .nav {
+            background-color: #283593;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav a:hover {
+            background-color: #1a237e;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .news-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-image {
+            width: 100%;
+            height: 200px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .news-content {
+            padding: 1rem;
+        }
+
+        .news-category {
+            background-color: #e3f2fd;
+            color: #1565c0;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+
+        .news-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .news-excerpt {
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .news-meta {
+            display: flex;
+            justify-content: space-between;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        .sidebar {
+            background-color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .weather-widget {
+            text-align: center;
+            padding: 1rem;
+            background-color: #e3f2fd;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .footer {
+            background-color: #1a237e;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1><i class="fas fa-newspaper"></i> موقع الأخبار العربية</h1>
+    </header>
+
+    <nav class="nav">
+        <a href="#"><i class="fas fa-home"></i> الرئيسية</a>
+        <a href="#"><i class="fas fa-globe"></i> عالمية</a>
+        <a href="#"><i class="fas fa-laptop"></i> تكنولوجيا</a>
+        <a href="#"><i class="fas fa-futbol"></i> رياضة</a>
+        <a href="#"><i class="fas fa-film"></i> ثقافة وفن</a>
+        <a href="#"><i class="fas fa-chart-line"></i> اقتصاد</a>
+    </nav>
+
+    <main class="container">
+        <section class="news-section">
+            <article class="news-card">
+                <div class="news-image">
+                    <i class="fas fa-newspaper fa-3x" style="color: #999;"></i>
+                </div>
+                <div class="news-content">
+                    <span class="news-category">عالمية</span>
+                    <h2 class="news-title">عنوان الخبر الرئيسي</h2>
+                    <p class="news-excerpt">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى.</p>
+                    <div class="news-meta">
+                        <span><i class="far fa-clock"></i> منذ ساعتين</span>
+                        <span><i class="far fa-comment"></i> 15 تعليق</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-image">
+                    <i class="fas fa-laptop fa-3x" style="color: #999;"></i>
+                </div>
+                <div class="news-content">
+                    <span class="news-category">تكنولوجيا</span>
+                    <h2 class="news-title">أحدث التطورات التقنية</h2>
+                    <p class="news-excerpt">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى.</p>
+                    <div class="news-meta">
+                        <span><i class="far fa-clock"></i> منذ 4 ساعات</span>
+                        <span><i class="far fa-comment"></i> 8 تعليقات</span>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <aside class="sidebar">
+            <div class="weather-widget">
+                <i class="fas fa-sun fa-2x"></i>
+                <h3>حالة الطقس</h3>
+                <p>القاهرة: 25°C</p>
+            </div>
+            <h3>الأكثر قراءة</h3>
+            <ul style="list-style: none; padding: 1rem;">
+                <li style="margin-bottom: 0.5rem;"><i class="fas fa-angle-left"></i> عنوان الخبر الأول</li>
+                <li style="margin-bottom: 0.5rem;"><i class="fas fa-angle-left"></i> عنوان الخبر الثاني</li>
+                <li style="margin-bottom: 0.5rem;"><i class="fas fa-angle-left"></i> عنوان الخبر الثالث</li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer class="footer">
+        <p>جميع الحقوق محفوظة © 2024 موقع الأخبار العربية</p>
+        <div style="margin-top: 1rem;">
+            <a href="#" style="color: white; margin: 0 0.5rem;"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="#" style="color: white; margin: 0 0.5rem;"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="#" style="color: white; margin: 0 0.5rem;"><i class="fab fa-instagram fa-2x"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
